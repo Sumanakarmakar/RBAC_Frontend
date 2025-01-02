@@ -1,0 +1,9 @@
+services:
+- type: web
+name: rbac-frontend
+env: static
+buildCommand: npm install && npm run build startCommand: npm run serve
+envVars:
+- key: PORT value: 3000
+- key: REACT_APP_BASE_URL
+value: https://rbac-server-admin.onrender.com/api/ 
